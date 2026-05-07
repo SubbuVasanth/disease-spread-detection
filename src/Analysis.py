@@ -64,9 +64,9 @@ def detect_surges(df: pd.DataFrame, multiplier: float = 2.0) -> pd.DataFrame:
 
 
 def top_risk_districts(df: pd.DataFrame, top_n: int = 5) -> pd.DataFrame:
-    from preprocessing import compute_ors
+    from Preprocessing import compute_ors
     return compute_ors(df).head(top_n)[['district','ORS','risk_level']]
 
 
 if __name__ == '__main__':
-    print("Run preprocessing.py first to generate merged_clean.csv, then import this module.")
+    print("Run Preprocessing.py first to generate merged_clean.csv in the datasets/processed_data/ directory, then import this module.")

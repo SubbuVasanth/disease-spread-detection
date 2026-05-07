@@ -14,6 +14,7 @@ EpiClim columns:
 import pandas as pd
 import numpy as np
 from sklearn.preprocessing import MinMaxScaler
+import os
 
 
 # ── Census 2011 — Tamil Nadu ──────────────────────────────────────────────────
@@ -199,8 +200,10 @@ def compute_ors(df: pd.DataFrame) -> pd.DataFrame:
 
 def run_pipeline(
     epiclim_path: str,
-    save_path: str = 'merged_clean.csv'
+    save_path: str = None
 ) -> pd.DataFrame:
+    if save_path is None:
+        save_path = os.path.join(os.path.dirname(__file__), '..', 'datasets', 'processed_data', 'merged_clean.csv')
 
     print("=" * 55)
     print("DiseaseSpread — Preprocessing Pipeline")
@@ -223,7 +226,9 @@ def run_pipeline(
 
 if __name__ == '__main__':
     import sys
-    path = sys.argv[1] if len(sys.argv) > 1 else 'epiclim_data.csv'
+    
+    default_path = os.path.join(os.path.dirname(__file__), '..', 'datasets', 'Data', 'epiclim_data.csv')
+    path = sys.argv[1] if len(sys.argv) > 1 else default_path
     df = run_pipeline(path)
     print("\nPreview:")
     print(df[['district','disease','year','mon','cases','temp_celsius',

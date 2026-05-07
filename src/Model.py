@@ -123,9 +123,11 @@ def train_model(X, y, test_size=0.2, random_state=42):
     }
 
 
-def save_artifacts(model, features, output_dir='outputs'):
+def save_artifacts(model, features, output_dir=None):
     """Save the model and generate feature importance chart."""
     import joblib
+    if output_dir is None:
+        output_dir = os.path.join(os.path.dirname(__file__), '..', 'outputs')
     
     model_dir = os.path.join(output_dir, 'results')
     graph_dir = os.path.join(output_dir, 'graphs')
@@ -157,7 +159,8 @@ def save_artifacts(model, features, output_dir='outputs'):
 
 if __name__ == '__main__':
     import sys
-    data_path = sys.argv[1] if len(sys.argv) > 1 else 'merged_clean.csv'
+    default_data_path = os.path.join(os.path.dirname(__file__), '..', 'datasets', 'processed_data', 'merged_clean.csv')
+    data_path = sys.argv[1] if len(sys.argv) > 1 else default_data_path
 
     print("DiseaseSpread — Model Training")
     print("=" * 50)
