@@ -19,11 +19,11 @@ env/
 .venv/
 
 # Data files (large raw files — don't commit to GitHub)
-datasets/
+# datasets/
 ~$*.xlsx
 
 # Model files
-outputs/
+# outputs/
 
 # OS
 .DS_Store
