@@ -86,11 +86,11 @@ Result Interpretation
 
 ## 👥 Team Members
 
-| Name | Roll Number | GitHub Profile |
-|------|------------|----------------|
-| [Team Leader Name] | [Roll No] | [@username](https://github.com/username) |
-| [Member 2 Name] | [Roll No] | [@username](https://github.com/username) |
-| [Member 3 Name] | [Roll No] | [@username](https://github.com/username) |
+| Name | Roll Number |
+|------|------------|
+| Subbu Vasanth K | RA2311026050079 | 
+| Barathraj R | RA2311026050069|
+
 
 ---
 
@@ -121,12 +121,6 @@ MiniProject/
     └── mini_project_report.pdf
 ```
 
----
 
-## 🔗 Submission Links
-- **Main Repository:** [GitHub Link Here]
-- **Submission Date:** 06 April 2026
 
----
-
-*SRM Institute of Science and Technology | Department of AIML | Batch 2026*
+*SRM Institute of Science and Technology | Department of AIML | Batch 2027*
